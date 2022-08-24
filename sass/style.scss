@@ -370,7 +370,17 @@ $SecondText: #828c8d;
 		top: 0;
 		right: 20%;
 	}
-	
+	&::before {
+		content: "";
+		background-image: url(../media/image/icon/top_left_circle.svg);
+		background-size: 80px 40px;
+		display: inline-block;
+		width: 80px; 
+		height: 40px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 	.card_statistics {
 		width: 25%;
 		text-align: center;
