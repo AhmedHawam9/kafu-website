@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kafu</title>
+    <link rel="icon" type="image/x-icon" href="media/image/logo.ico">
+    <!-- Css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!-- Js -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/fontawesome.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- =========== ? navbar =========== -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="./media/image/logo.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">للشركات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">للتوظيف</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">تواصل معنا</a>
+                    </li>
+                </ul>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./media/image/arabic.png" alt="lang">العربية
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="./media/image/arabic.png" alt="lang">العربية
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="./media/image/english.png" alt="lang">الانجليزية
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- =========== ? navbar =========== -->
+
+    <!-- =========== ? header =========== -->
+    <section class="header">
+        <!-- Swiper -->
+        <div class="swiper-container headerSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="media/image/header.jpg" alt="header">
+                </div>
+                <div class="swiper-slide">
+                    <img src="media/image/header.jpg" alt="header">
+                </div>
+                <div class="swiper-slide">
+                    <img src="media/image/header.jpg" alt="header">
+                </div>
+            </div>
+            <div class="text-header">
+                <p>مرحبا بك</p>
+                <h2> كفو لجميع الوظائف التي تبحث عنها</h2>
+                <span> تحاول كاستيللو جاهده في إتمام المنظومه الففي منصة كفو تستطيع كموظف البحث عن وظيفة احلامك
+                    و يمكنك أيضا اذا كنت صاحب شركة طلب موظفينك لتبية احتياجات شركتك من موظفين</span>
+                <a href="#" class="btn hvr-bob signup">تسجيل كشركة</a>
+            </div>
+            <div class="arrow">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".headerSwiper", {
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
+                    },
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        </script>
+    </section>
+    <!-- =========== ? header =========== -->
+
+    <!-- =========== ? about =========== -->
+    <section class="about">
+        <div class="container">
+            <p class="text-header">من نحن</p>
+            <h4 class="title_section">ماذا تقدم كفو لكم من مميزات</h4>
+            <!-- Start card about -->
+            <div class="card_about">
+                <i class="fa-solid fa-shield"></i>
+                <h4>الثقة و الجدية</h4>
+                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث
+                    يمكنك
+                    أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف ال </p>
+            </div>
+            <!-- End card about -->
+
+            <!-- Start card about -->
+            <div class="card_about">
+                <i class="fa-solid fa-medal"></i>
+                <h4>ضمان جودة الموظّفين</h4>
+                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث
+                    يمكنك
+                    أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف ال </p>
+            </div>
+            <!-- End card about -->
+
+            <!-- Start card about -->
+            <div class="card_about">
+                <i class="fa-solid fa-headphones"></i>
+                <h4>وظيفتك متوفرة لدينا</h4>
+                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث
+                    يمكنك
+                    أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف ال </p>
+            </div>
+            <!-- End card about -->
+        </div>
+    </section>
+    <!-- =========== ? about =========== -->
+
+    <!-- =========== ? statistics =========== -->
+    <section class="statistics container">
+        <!-- Start card statistics -->
+        <div class="card_statistics">
+            <h3 class="counter">260</h3>
+            <p>عدد الشركات لدينا</p>
+        </div>
+        <!-- End card statistics -->
+
+        <!-- Start card statistics -->
+        <div class="card_statistics">
+            <h3 class="counter">292</h3>
+            <p>عدد الموظفين المتاحين</p>
+        </div>
+        <!-- End card statistics -->
+
+        <!-- Start card statistics -->
+        <div class="card_statistics">
+            <h3 class="counter">400 <span>K</span></h3>
+            <p>ساعة عمل تم تغطيتها</p>
+        </div>
+        <!-- End card statistics -->
+
+        <!-- Start card statistics -->
+        <div class="card_statistics">
+            <h3 class="counter">4.5</h3>
+            <p>متوسط تقييم الموظفين</p>
+        </div>
+        <!-- End card statistics -->
+    </section>
+    <!-- =========== ? statistics =========== -->
+</body>
+
+</html>
