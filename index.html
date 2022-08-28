@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/hover-min.css">
 
     <!-- Js -->
     <script src="js/bootstrap.min.js"></script>
@@ -27,7 +28,7 @@
 
 <body>
     <!-- =========== ? navbar =========== -->
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="./media/image/logo.png" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -37,19 +38,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
+                        <a class="nav-link" aria-current="page" href="index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">من نحن</a>
+                        <a class="nav-link" href="#about">من نحن</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">للشركات</a>
+                        <a class="nav-link" href="#company">للشركات</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">للتوظيف</a>
+                        <a class="nav-link" href="#employment">للتوظيف</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">تواصل معنا</a>
+                        <a class="nav-link" href="#contact">تواصل معنا</a>
                     </li>
                 </ul>
                 <div class="dropdown">
@@ -127,7 +128,7 @@
     <!-- =========== ? header =========== -->
 
     <!-- =========== ? about =========== -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <p class="text-header">من نحن</p>
             <h4 class="title_section">ماذا تقدم كفو لكم من مميزات</h4>
@@ -197,7 +198,7 @@
     <!-- =========== ? statistics =========== -->
 
     <!-- =========== ? company =========== -->
-    <section class="company">
+    <section class="company" id="company">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-12">
@@ -347,11 +348,27 @@
         <!-- Initialize Swiper -->
         <script>
             var swiper = new Swiper(".partnersSwiper", {
-                slidesPerView: 7,
                 spaceBetween: 30,
                 slidesPerGroup: 1,
                 loop: true,
                 loopFillGroupWithBlank: true,
+                breakpoints: {
+                    300: {
+                        slidesPerView: 3,
+                        // slidesPerGroup: 1,
+                        loopFillGroupWithBlank: false,
+                    },
+                    768: {
+                        slidesPerView: 5,
+                        // slidesPerGroup: 1,
+                        loopFillGroupWithBlank: false,
+                    },
+                    1024: {
+                        slidesPerView: 7,
+                        spaceBetween: 30,
+                        loopFillGroupWithBlank: true,
+                    },
+                }
             });
         </script>
         <!-- =========== ? partners =========== -->
@@ -359,7 +376,7 @@
     <!-- =========== ? partners =========== -->
 
     <!-- =========== ? employment =========== -->
-    <section class="employment">
+    <section class="employment" id="employment">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-12">
@@ -445,7 +462,7 @@
     </section>
     <!-- =========== ? download =========== -->
 
-
+    <!-- =========== ? application =========== -->
     <section class="application">
         <div class="container">
             <h3>بعض شاشات التطبيق</h3>
@@ -506,21 +523,344 @@
         <!-- Initialize Swiper -->
         <script>
             var swiper = new Swiper(".applicationSwiper", {
-                slidesPerView: 5,
                 spaceBetween: 30,
                 slidesPerGroup: 1,
                 loop: true,
-                loopFillGroupWithBlank: true,
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
                 },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    300: {
+                        slidesPerView: 1,
+                        // slidesPerGroup: 1,
+                        loopFillGroupWithBlank: false,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        // slidesPerGroup: 1,
+                        loopFillGroupWithBlank: false,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 30,
+                        loopFillGroupWithBlank: true,
+                    },
+                }
             });
         </script>
     </section>
+    <!-- =========== ? application =========== -->
+
+    <!-- =========== ? opinion =========== -->
+    <section class="opinion">
+        <div class="container">
+            <h5 class="text-header">اراء عملائنا </h5>
+            <h3>نحن نهتم بتجارب عملائنا من خلال تعاملتهم لنا</h3>
+            <div class="swiper opinionSwiper">
+                <div class="swiper-wrapper">
+                    <!-- For loop this swiper slide -->
+                    <div class="swiper-slide">
+                        <div class="card_opinion">
+                            <h5 class="text-head">تجربة ممتازة</h5>
+                            <p class="text">
+                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد
+                                النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيا
+                            </p>
+                            <div class="d-flex">
+                                <img src="./media/image/7w7w.jpg" alt="person">
+                                <div class="title">
+                                    <p class="name">Ahmed Hawam</p>
+                                    <span>Web developer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- For loop this swiper slide -->
+
+                    <!-- For loop this swiper slide -->
+                    <div class="swiper-slide">
+                        <div class="card_opinion">
+                            <h5 class="text-head">تجربة ممتازة</h5>
+                            <p class="text">
+                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد
+                                النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيا
+                            </p>
+                            <div class="d-flex">
+                                <img src="./media/image/7w7w.jpg" alt="person">
+                                <div class="title">
+                                    <p class="name">Ahmed Hawam</p>
+                                    <span>Web developer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- For loop this swiper slide -->
+
+                    <!-- For loop this swiper slide -->
+                    <div class="swiper-slide">
+                        <div class="card_opinion">
+                            <h5 class="text-head">تجربة ممتازة</h5>
+                            <p class="text">
+                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد
+                                النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيا
+                            </p>
+                            <div class="d-flex">
+                                <img src="./media/image/7w7w.jpg" alt="person">
+                                <div class="title">
+                                    <p class="name">Ahmed Hawam</p>
+                                    <span>Web developer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- For loop this swiper slide -->
+
+                    <!-- For loop this swiper slide -->
+                    <div class="swiper-slide">
+                        <div class="card_opinion">
+                            <h5 class="text-head">تجربة ممتازة</h5>
+                            <p class="text">
+                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد
+                                النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيا
+                            </p>
+                            <div class="d-flex">
+                                <img src="./media/image/7w7w.jpg" alt="person">
+                                <div class="title">
+                                    <p class="name">Ahmed Hawam</p>
+                                    <span>Web developer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- For loop this swiper slide -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+        </div>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".opinionSwiper", {
+                spaceBetween: 30,
+                slidesPerGroup: 1,
+                // loop: true,
+                // pagination: {
+                //     el: ".swiper-pagination",
+                //     clickable: true,
+                // },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    300: {
+                        slidesPerView: 1,
+                        // slidesPerGroup: 1,
+                        loopFillGroupWithBlank: false,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        // slidesPerGroup: 1,
+                        loopFillGroupWithBlank: false,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                        loopFillGroupWithBlank: true,
+                    },
+                }
+            });
+        </script>
+    </section>
+    <!-- =========== ? opinion =========== -->
+
+    <!-- =========== ? contact =========== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <img src="./media/image/contact.jpg" alt="contact">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <h5 class="text-header">تواصل معنا</h5>
+                    <h2>هل لديك أسئلة ؟</h2>
+                    <h2>! دعنا نتحدث</h2>
+                    <form action="" class="form_contact">
+                        <div class="form-group">
+                            <input type="text" name="" id="" class="form-control" placeholder="*اسمك بالكامل">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="" id="" class="form-control" placeholder="*البريد الالكتروني">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="" id="" class="form-control" placeholder="*رقم الهاتف">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="" id="" cols="30" rows="5" class="form-control"
+                                placeholder="ضع رسالتك هنا*"></textarea>
+                        </div>
+                        <button type="submit" class="btn submit_form_conatct">ارسال </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =========== ? contact =========== -->
+
+    <!-- =========== ? contact us =========== -->
+    <section class="contact_us">
+        <div class="container">
+            <form action="" class="form_contact_us">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <h4>كن علي تواصل معنا</h4>
+                        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                            العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عالتى
+                            يولدها التطبيق.</p>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="form-group">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" name="" id="" class="form-control" placeholder="ادخل البريد الالكتروني">
+                            <button type="submit" class="btn">ارسال</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- =========== ? contact us =========== -->
+
+    <!-- start footer section -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div
+                    class="col-lg-3 col-md-12 col-sm-12 logo-col d-flex flex-column align-items-sm-center align-items-lg-start justify-content-sm-center contact">
+                    <img src="./media/image/logo.png" alt="logo footer" />
+                    <p>
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
+                        حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عالتى يولدها
+                        التطبيق.إذا كنت تحتاج إلى عدد الفقرات كما تريد، النص لن يبدو مقسما
+                    </p>
+                    <ul class="socialicon mt-2">
+                        <li>
+                            <a target="_blank" href="#"><i class="fab fa-facebook-f icon"></i></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="#"><i class="fab fa-twitter icon"></i></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="#"><i class="fab fa-instagram icon"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-lg-flex col-lg-9 col-md-12 col-sm-12 mx-auto">
+                    <div class="col-lg-2 col-md-12 col-sm-12 col-links">
+                        <div class="h3 d-block">الصفحات</div>
+                        <div class="d-lg-block">
+                            <ul>
+                                <li>
+                                    <a href="index.html" class="hvr-float-shadow">الرئيسية</a>
+                                </li>
+                                <li>
+                                    <a href="#about" class="hvr-float-shadow">من نحن</a>
+                                </li>
+                                <li>
+                                    <a href="#company" class="hvr-float-shadow">للشركات</a>
+                                </li>
+                                <li>
+                                    <a href="#employment" class="hvr-float-shadow">للتوظيف</a>
+                                </li>
+                                <li>
+                                    <a href="#contact" class="hvr-float-shadow">تواصل معنا</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 col-links">
+                        <div class="h3 d-block">روابط أخري</div>
+                        <div class="d-lg-block">
+                            <ul>
+                                <li>
+                                    <a href="faq.html" class="hvr-float-shadow">الأسئلة الشائعة</a>
+                                </li>
+                                <li>
+                                    <a href="terms.html" class="hvr-float-shadow">شروط الاستخدام</a>
+                                </li>
+                                <li>
+                                    <a href="privacy.html" class="hvr-float-shadow">سياسة الخصوصية</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 p-0 col-links">
+                        <div class="h3 d-block">جهات الاتصال</div>
+                        <p>العنواين</p>
+                        <span> المنطقه الصناعيه الثانيه - حي الكوثر - سوهاج
+                            عمارات العبور - صلاح سالم - القاهره</span>
+                        <div class="row w-100">
+                            <div class="col-xl-6 col-12">
+                                <p>أرقام الموبيل</p>
+                                <a href="tel:+20 000 000 00">+20 000 000 00</a>
+                                <a href="tel:+20 000 000 00">+20 000 000 00</a>
+                            </div>
+                            <div class="col-xl-6 col-12">
+                                <p>البريد الإلكتروني</p>
+                                <a href="mailto:someone@gmail.com">someone@gmail.com</a>
+                                <a href="mailto:someone@gmail.com">someone@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-12 p-0 col-links">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3418.960405149614!2d31.371055515097687!3d31.027352778424618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f79d1062afff57%3A0x40e6c610456cf723!2sCrazy%20Idea!5e0!3m2!1sen!2seg!4v1661687529231!5m2!1sen!2seg"
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid p-0">
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="item text-center col-sm-6">
+                            <p class="my-3">
+                                © كل الحقوق محفوظة لموقع كفو 2022
+                            </p>
+                        </div>
+                        <div class="item text-center col-sm-6">
+                            <a target="_blank" href="https://crazyideaco.com">
+                                <h6>
+                                    Made with
+                                    <img class="my-heart" src="./media/image/heart.svg" alt="icon heart" />
+                                    by Crazy Idea
+                                </h6>
+                            </a>
+                            <span>Think Out Of The Box</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer section -->
 
     <script src="js/counterup.min.js"></script>
     <script src="js/waypoints.min.js"></script>
+    <script src="js/main.js"></script>
     <script>
         $('.counter').counterUp({
             delay: 20,
